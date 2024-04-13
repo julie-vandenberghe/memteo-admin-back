@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Admin from './routes/admin.js';
+import NotFound from "./components/NotFound";
 import {
   BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
-import Admin from './routes/admin.js';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Admin/>}/>
+        <Route path="*" element={<NotFound/>} /> {/* Si aucune route ne correspond à ce qui est affiché dans l'url, on affiche le composant NotFound */}
       </Routes>
     </Router>
   </React.StrictMode>
