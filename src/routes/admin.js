@@ -44,10 +44,19 @@ const Admin = () => {
     })
   }
 
+// handleChange pour mettre à jour les states associés aux memes
+const handleMemeInputChange = (e, key) => {
+  setMeme({
+    [key]: e.target.value,
+  });
+};
+
   // Ajouter un meme
   const submit = async (e) => {
+    e.preventDefault();
+
     const name = e.target.elements.name.value;
-    const link = e.target.elements.link.value;
+    const link = e.target.elements.url.value;
     console.log(name);
 
     setNewMeme({
@@ -82,16 +91,16 @@ const Admin = () => {
       <Header/>
       <h1>Ajouter un meme</h1>
       <form>
-          <label htmlFor="weatherCondition">Choisir une condition météorologique :</label>
-          <select name="weatherCondition" required>
+          <label htmlFor="name">Choisir une condition météorologique :</label>
+          <select name="name" required>
               <option value="">--Please choose an option--</option>
               {Object.entries(weatherConditionsGroup).map(([condition, icon]) => ( // Object.entries() permet de convertir l'objet en un tableau de paires [clé, valeur] et map() parcourt ce tableau de paires et créer des options pour chaque paire
-                <option key={icon} value={icon}>{condition}</option>
+                <option key={icon} value={meme.name}>{condition}</option>
               ))}
           </select>
           <label htmlFor="url">URL du meme :</label>
-          <input value={meme.link} type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required />
-          <button type="submit" onClick={() => submit()}>Ajouter</button>
+          <input onChange={(e) => handleMemeInputChange(e, "link")} value={meme.link} type="text" name="url" id="url" placeholder="https://example.com" size="30" required />
+          <button type="submit" onClick={(e) => submit(e)}>Ajouter</button>
       </form>
     </>
   )

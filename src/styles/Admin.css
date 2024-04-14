@@ -46,3 +46,9 @@ img.listMemes {
     width: 20rem;
     border-radius: 1.5rem;
 }
+
+div.cards {
+    display:flex;
+    justify-content: center;
+}
+

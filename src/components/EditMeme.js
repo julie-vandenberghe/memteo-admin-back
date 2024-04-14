@@ -21,12 +21,6 @@ const EditMeme = (props) => {
             });
     }
 
-    const listMemes = this.state.movies.map((movie) => {
-        return (
-          <Movie key={movie.id} id={movie.id} title={movie.title} poster={movie.poster}/> // <- Ceci est un composant
-        )
-      });
-
     useEffect(() => {
         if (id) {
             getMeme(id);

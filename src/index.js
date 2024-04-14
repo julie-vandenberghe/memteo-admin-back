@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Admin from './routes/admin.js';
+import Home from './routes/home.js';
 import NotFound from "./components/NotFound";
 import {
   BrowserRouter as Router,
@@ -20,9 +21,10 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Admin/>}/>
+        <Route path="/home" element={<Home/>} />
         <Route path="/list" element={<ListMemes/>} />
         <Route path="/listSounds" element={<ListSounds/>} />
-        <Route path="/add" element={<EditMeme/>} />
+        <Route path="/add" element={<Admin/>} />
         <Route path="/edit/:id" element={<EditMeme/>} />
         <Route path="*" element={<NotFound/>} /> {/* Si aucune route ne correspond à ce qui est affiché dans l'url, on affiche le composant NotFound */}
       </Routes>
