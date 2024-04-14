@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/memteo-logo-base.png';
+import logo from '../assets/memteo-logo-base_nega.png';
 
 
 export const Header = () => {

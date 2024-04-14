@@ -50,5 +50,30 @@ img.listMemes {
 div.cards {
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap:4rem;
 }
+
+div.card {
+    background-color: #9de5ce;
+    border-radius: 2rem;
+    padding: 50px 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+div.icon {
+    font-size:8rem;
+    color: #212121;
+}
+
+div.actions {
+    display:flex;
+    justify-content: space-between;
+    font-size:3rem;
+    color: #212121;
+}
+
 

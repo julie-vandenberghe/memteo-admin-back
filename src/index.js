@@ -22,7 +22,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Admin/>}/>
         <Route path="/home" element={<Home/>} />
-        <Route path="/list" element={<ListMemes/>} />
+        <Route path="/listMemes" element={<ListMemes/>} />
         <Route path="/listSounds" element={<ListSounds/>} />
         <Route path="/add" element={<Admin/>} />
         <Route path="/edit/:id" element={<EditMeme/>} />
