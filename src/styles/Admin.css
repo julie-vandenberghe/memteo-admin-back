@@ -1,0 +1,48 @@
+body {
+    background-color: #212121;
+    color: #9de6ce;
+    text-align:center;
+}
+
+header {
+    padding: 0 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 10rem;
+}
+
+header ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+header li {
+    display: inline-block;
+}
+
+header li a {
+    text-decoration: none;
+    color: #9de6ce;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.listMemes {
+    height: auto;
+    width: 20rem;
+    border-radius: 1.5rem;
+}

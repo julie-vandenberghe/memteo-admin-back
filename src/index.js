@@ -9,6 +9,9 @@ import {
   Route,
   Routes
 } from "react-router-dom";
+import EditMeme from './components/EditMeme.js';
+import ListMemes from './components/ListMeme.js';
+import ListSounds from './components/ListSound.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +20,10 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Admin/>}/>
+        <Route path="/list" element={<ListMemes/>} />
+        <Route path="/listSounds" element={<ListSounds/>} />
+        <Route path="/add" element={<EditMeme/>} />
+        <Route path="/edit/:id" element={<EditMeme/>} />
         <Route path="*" element={<NotFound/>} /> {/* Si aucune route ne correspond à ce qui est affiché dans l'url, on affiche le composant NotFound */}
       </Routes>
     </Router>
