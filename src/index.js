@@ -19,9 +19,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Routes>
-        <Route path="/" element={<Admin/>}/>
-        <Route path="/home" element={<Home/>} />
+      <Routes>        
+        <Route path="/" element={<Home/>} />
         <Route path="/listMemes" element={<ListMemes/>} />
         <Route path="/listSounds" element={<ListSounds/>} />
         <Route path="/add" element={<Admin/>} />

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from './Header.js';
+import { MdCreate } from 'react-icons/md';
+import { RiDeleteBin5Line } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+
 
 const ListSounds = () => {
   const [sounds, setSounds] = useState([]);
@@ -29,11 +33,15 @@ const ListSounds = () => {
     <>
     <Header></Header>
       <h1>Liste des sons</h1>
-      <div className="sounds">
+      <div className="cards">
         {sounds.map(sound => (
-          <div className="sound" key={sound._id}>
-            <div className="weatherCondition">{sound.name}</div>
+          <div className="card sound" key={sound._id}>
+            <div className="text">{sound.name}</div>
             <audio controls className='listSounds' src={sound.link}></audio>
+            <div className="actions">
+              <div className="action"><MdCreate /></div>
+              <Link to="/listMemes"><div className="action"><RiDeleteBin5Line /></div></Link>
+            </div>
           </div>
         ))}
       </div>
