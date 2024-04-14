@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from './Header.js';
+import { Link } from 'react-router-dom';
+import { MdCreate } from "react-icons/md";
+import { RiDeleteBin5Line } from "react-icons/ri";
+
 
 const ListMemes = () => {
   const [memes, setMemes] = useState([]);
@@ -29,11 +33,15 @@ const ListMemes = () => {
     <>
     <Header></Header>
       <h1>Liste des memes</h1>
-      <div className="memes">
+      <div className="cards">
         {memes.map(meme => (
-          <div className="meme" key={meme._id}>
-            <div className="weatherCondition">{meme.name}</div>
+          <div className="card meme" key={meme._id}>
             <img className='listMemes' src={meme.link}/>
+            <div className="text">{meme.name}</div>
+            <div className="actions">
+              <div className="action"><MdCreate /></div>
+              <Link to="/listMemes"><div className="action"><RiDeleteBin5Line /></div></Link>
+            </div>
           </div>
         ))}
       </div>

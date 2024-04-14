@@ -44,7 +44,7 @@ form {
 img.listMemes {
     height: auto;
     width: 20rem;
-    border-radius: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
 }
 
 div.cards {
@@ -57,16 +57,25 @@ div.cards {
 div.card {
     background-color: #9de5ce;
     border-radius: 2rem;
-    padding: 50px 115px;
+    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
 }
 
+div.card.meme {
+    padding: 0;
+    justify-content: space-between;
+}
+.card .text {
+    color: #212121;
+}
+
 div.icon {
     font-size:8rem;
     color: #212121;
+    display: flex;
 }
 
 div.actions {
@@ -74,6 +83,20 @@ div.actions {
     justify-content: space-between;
     font-size:3rem;
     color: #212121;
+}
+
+.meme div.actions {
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.action {
+    border-radius: 2rem;
+    background-color: #212121;
+    color:#9de5ce;
+    font-size: 2rem;
+    border-radius: 11rem;
+    padding: 0.4rem 0.5rem 0.2rem 0.5rem;
 }
 
 

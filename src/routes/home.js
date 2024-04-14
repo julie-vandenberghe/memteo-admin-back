@@ -15,15 +15,15 @@ function Home() {
             <div className='card'>
                 <div className='icon'><GoSmiley /></div>
                 <div className="actions">
-                    <div className='text'><IoAddCircle /></div>
-                    <Link to="/listMemes"><div className='text'><IoListCircle /></div></Link>
+                    <IoAddCircle />
+                    <Link to="/listMemes"><IoListCircle /></Link>
                 </div>
             </div>
             <div className='card'>
                 <div className='icon'><GiMusicalNotes /></div>
                 <div className="actions">
-                    <div className='text'><IoAddCircle /></div>
-                    <Link to="/listSounds"><div className='text'><IoListCircle /></div></Link>
+                    <IoAddCircle />
+                    <Link to="/listSounds"><IoListCircle /></Link>
                 </div>
             </div>
         </div>
